@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Page</title>
+</head>
+<body>
+    <style>
+        /* Add background color to the entire body */
+        body {
+            background-color: #ff8;
+        }
+    </style>
+    <canvas id="myCanvas" width="500" height="400"></canvas>
+
+    <h2>Choosing shapes </h2>
+
+      <!-- Shape selector gives shapes-->
+      <label for="shape">Select Shape:</label>
+      <input type="radio" id="circle" name="shape" value="circle" > circle
+      <input type="radio" id="rectangle" name="shape" value="rectangle"> rectangle
+      <input type="radio" id="line" name="shape" value="line"> Line
+
+<BR></BR>
+      <!-- Color selector gives colors  -->
+    <label for="colorSelector">Choose your color:</label>
+    <input type="radio" name="color" value="blue" id="colorB"> Blue
+    <input type="radio" name="color" value="purple" id="colorP"> Purple
+    <input type="radio" name="color" value="red" id="colorR"> Red
+    <br>
+    <button id="clear">Clear</button> <!--creates clear button to clean page-->
+
+    <script src="app.js"></script>
+</body>
+</html>
