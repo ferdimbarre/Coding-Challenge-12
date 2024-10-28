@@ -82,8 +82,3 @@ document.querySelector("#clear").addEventListener("click", () => {
     ctx.clearRect(0,0,canvas.width,canvas.height); 
 }) //clears page 
 
-
-// mouse movements events
-document.querySelector("html").addEventListener("mousemove", event =>{
-    console.log(`X: ${event.clientX} Y: ${event.clientY}`); //tracks mouse movements
-}); 
