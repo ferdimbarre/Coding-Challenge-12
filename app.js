@@ -56,3 +56,34 @@ ctx.moveTo(defX, defY);
     ctx.lineWidth = 4;
     ctx.stroke(); //creates the line
 };
+
+//starting point
+let defX, defY //default start point
+canvas.addEventListener("mousedown", e => {
+    defX = e.offsetX;  // Sets X to the mouse's place
+    defY = e.offsetY;  // Set Y to the mouse's place
+    console.log(`x = ${defX} y= ${defY}`)
+}); //adds event listener to track the mouse movements
+
+
+// create selected shape
+canvas.addEventListener("mouseup", e => {
+    if (selectedShape === "circle") {
+        createCircle(e.offsetX, e.offsetY);
+    } else if (selectedShape === "rectangle") {
+        createRectangle(e.offsetX, e.offsetY);
+    } else if (selectedShape === "line") {
+        createLine(e.offsetX, e.offsetY); 
+    }
+}); //creates the shape that was selected 
+
+//clear 
+document.querySelector("#clear").addEventListener("click", () => {
+    ctx.clearRect(0,0,canvas.width,canvas.height); 
+}) //clears page 
+
+
+// mouse movements events
+document.querySelector("html").addEventListener("mousemove", event =>{
+    console.log(`X: ${event.clientX} Y: ${event.clientY}`); //tracks mouse movements
+}); 
